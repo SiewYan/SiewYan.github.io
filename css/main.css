@@ -29,7 +29,7 @@ ul.posts li { list-style: none; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
 
 /**apply to code fences with plan text**/
-.md-fences {
+pre code {
   background-color: #263238;
   color: rgba(233, 237, 237, 1);
   border: none;
