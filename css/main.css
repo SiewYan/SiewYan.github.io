@@ -29,8 +29,13 @@ ul.posts li { list-style: none; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
 
 /**apply to code fences with plan text**/
-pre code {
-  background-color: #263238;
-  color: rgba(233, 237, 237, 1);
-  border: none;
+.block-code{
+    background-color: pink;
+    border-style: solid none;
+    border-color: red white;
+    font-family: "Courier New", Courier, monospace;
+}
+.inline-code {
+    background-color: silver;
+    font-family: "Courier New", Courier, monospace;
 }
