@@ -3,12 +3,17 @@ layout: default
 title: CMS Big Data
 ---
 
-  <h1>CMS Big Data</h1>
-
-  <h3>Setting up jupyter notebook</h3>
-  <ul>
+<h1>CMS Big Data</h1>
+<h3>Setting up jupyter notebook</h3>
+<ul>
   <li><p>A ssh tunnel is necesary in order to run jupyter locally in the browser. First ssh into your cluster with command below:</p>
- <pre><code>
+  <pre><code>
   ssh -L localhost:1122:localhost:1122 shoh@10.64.22.66
- </code></pre>
+  </code></pre>
+  <li><p>After logging into the cluster, launch the jupyter notebook with</p>
+  <pre><code>
+  jupyter notebook --no-browser --port=1122 --ip=127.0.0.1
+  </code></pre>
+  <p>It will yield a link which needed to be pasted in the url field in the browser, if everything is ok, the browser will load the cluster 
+    environment with jupyter notebook. You are good to go.</p>
 </ul>
