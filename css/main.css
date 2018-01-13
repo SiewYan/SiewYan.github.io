@@ -63,3 +63,13 @@ code {
         white-space: -moz-pre-wrap;
         white-space: -o-pre-wrap;
 }
+
+a:link {
+color:  #09c5c8;
+}
+a:visited {
+color:  #09c5c8;
+}
+a:hover {
+color:  #00d158;
+} 
