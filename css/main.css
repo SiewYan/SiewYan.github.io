@@ -43,7 +43,7 @@ ul.posts li { list-style: none; }
 pre {
         font-family: "Courier 10 Pitch", Courier, monospace;
         font-size: small;
-        line-height: 100%;
+        line-height: 60%;
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
