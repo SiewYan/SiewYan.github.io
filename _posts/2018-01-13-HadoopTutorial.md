@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: "Hadoop Tutorial"
 date: 2018-01-13
