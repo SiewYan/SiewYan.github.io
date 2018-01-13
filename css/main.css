@@ -43,11 +43,13 @@ ul.posts li { list-style: none; }
 pre {
         font-family: "Courier 10 Pitch", Courier, monospace;
         font-size: medium;
-        line-height: 140%;
+        line-height: 60%;
+        /*
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
         white-space: -o-pre-wrap;
+    */
         background-color: #eee;
         border: 1px solid #999;
         display: block;
@@ -57,11 +59,13 @@ pre {
 code {
         font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
         font-size: medium;
-        line-height: 140%;
+        line-height: 60%;
+    /*
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
         white-space: -o-pre-wrap;
+    */
 }
 
 a:link {
