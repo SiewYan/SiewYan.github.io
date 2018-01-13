@@ -23,6 +23,7 @@ title: CMS Big Data
     The PySpark interface connects the two languages and handles passing data back and forth between the two. To gain access to Spark, 
     you first need to create a SparkSession who loads the Scala binaries via PySpark. Once the connection is complete, 
     PySpark returns a SparkSession, which is the central entrypoint to Spark.</p>
+    
     <pre><code>
     from pyspark.sql import SparkSession
     spark = SparkSession.builder \
@@ -48,4 +49,5 @@ print df.count()
 #show GenMET_pt and HLTT_AK8PFHT750_TrimMass50
 df.select("GenMET_pt","HLT_AK8PFHT750_TrimMass50").show(3)
     </code></pre>
+    <p>The operation on files stored in hdfs could be found <a href="https://indico.cern.ch/event/404527/contributions/968835/attachments/1123385/1603232/Introduction_to_HDFS.pdf" target="_blank">here</a></p>
 </ul>
