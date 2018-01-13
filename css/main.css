@@ -44,10 +44,12 @@ pre {
         font-family: "Courier 10 Pitch", Courier, monospace;
         font-size: small;
         line-height: 60%;
+        /*
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
         white-space: -o-pre-wrap;
+    */
         background-color: #eee;
         border: 1px solid #999;
         display: block;
