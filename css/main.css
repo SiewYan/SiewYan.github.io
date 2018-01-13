@@ -43,7 +43,7 @@ ul.posts li { list-style: none; }
 pre {
         font-family: "Courier 10 Pitch", Courier, monospace;
         font-size: medium;
-        line-height: 60%;
+        line-height: 100%;
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
@@ -57,7 +57,7 @@ pre {
 code {
         font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
         font-size: medium;
-        line-height: 60%;
+        line-height: 100%;
         white-space: pre;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
