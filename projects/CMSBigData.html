@@ -25,21 +25,21 @@ title: CMS Big Data
     PySpark returns a SparkSession, which is the central entrypoint to Spark.</p>
     
     <pre><code>
-    from pyspark.sql import SparkSession
-    spark = SparkSession.builder \
-    .master(
+from pyspark.sql import SparkSession
+spark = SparkSession.builder \
+        .master(
         "spark://10.64.22.66:7077"
-    ) \
-    .appName(# Name of your application in the dashboard/UI
+        ) \
+        .appName(# Name of your application in the dashboard/UI
              "printNanoAodAPP"
-            ) \
-    .config(# Tell Spark to load some extra libraries from Maven (the Java repository)
-            'spark.jars.packages',
-            'org.diana-hep:spark-root_2.11:0.1.13,org.diana-hep:histogrammar-sparksql_2.11:1.0.4',
-            ) \
-    .config('spark.cores.max',3
-            ) \
-    .getOrCreate()
+        ) \
+        .config(# Tell Spark to load some extra libraries from Maven (the Java repository)
+              'spark.jars.packages',
+              'org.diana-hep:spark-root_2.11:0.1.13,org.diana-hep:histogrammar-sparksql_2.11:1.0.4',
+              ) \
+        .config('spark.cores.max',3
+              ) \
+        .getOrCreate()
 
 #Read the ROOT file into a Spark DataFrame
 df = spark.read.format("org.dianahep.sparkroot").load("hdfs:///user/shoh/nanoaod/bbdm80X_NANO.root")
