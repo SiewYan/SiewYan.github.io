@@ -51,6 +51,7 @@ df.select("GenMET_pt","HLT_AK8PFHT750_TrimMass50").show(3)
     </code></pre>
     <p>This block demonstrated that the root reading capability is intact. The operation on files stored in hdfs could be found <a href="https://indico.cern.ch/event/404527/contributions/968835/attachments/1123385/1603232/Introduction_to_HDFS.pdf" target="_blank">here</a></p>
   <li><p>Furhter Verification could be achive by running the below script in your jupyter notebook</p>
+    
     <pre><code>
 #Verifying spark, spark-root, histogrammer, and matplot works
 from pyspark.sql import SparkSession
@@ -86,7 +87,7 @@ pi = 4.0 * count / num_samples
 print(pi)
     </code></pre>
     
-    <pre><code>
+<pre><code>
 #Verifying Spark-ROOT functionality
 # Read the ROOT file into a Spark DataFrame...
 import os
@@ -94,7 +95,7 @@ testPath = "hdfs:///user/shoh/nanoaod/bbdm80X_NANO.root"
 df = spark.read.format("org.dianahep.sparkroot").load(testPath)
 # ... and print the number of events
 print df.count()
-    </code></p>
+</code></p>
     
 <pre><code>
 #Verifying histogrammar
@@ -118,13 +119,13 @@ for d in data:
 
 # Plot the resulting histogram
 print gauss.ascii()
-    </code></pre>
+</code></pre>
     
-    <pre><code>
+<pre><code>
 #Verifying Matplotlib Functionality
 import matplotlib.pyplot as plt
 %matplotlib inline
 plot = gauss.plot.matplotlib(name="Unit Gaussian")
-    </code></pre>
+</code></pre>
     <p>If you manage to the output of each block, you have verified that spark, spark-root, histogrammer and matlibplot are working!</p>
 </ul>
