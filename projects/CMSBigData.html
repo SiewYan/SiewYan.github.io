@@ -42,12 +42,56 @@ title: CMS Big Data
     .getOrCreate()
 
 #Read the ROOT file into a Spark DataFrame
-df = spark.read.format("org.dianahep.sparkroot").load("hdfs:/user/shoh/output.root")
+df = spark.read.format("org.dianahep.sparkroot").load("hdfs:///user/shoh/nanoaod/bbdm80X_NANO.root")
 # ... and print the number of events
 print df.count()
 
 #show GenMET_pt and HLTT_AK8PFHT750_TrimMass50
 df.select("GenMET_pt","HLT_AK8PFHT750_TrimMass50").show(3)
     </code></pre>
-    <p>The operation on files stored in hdfs could be found <a href="https://indico.cern.ch/event/404527/contributions/968835/attachments/1123385/1603232/Introduction_to_HDFS.pdf" target="_blank">here</a></p>
+    <p>This block demonstrated that the root reading capability is intact. The operation on files stored in hdfs could be found <a href="https://indico.cern.ch/event/404527/contributions/968835/attachments/1123385/1603232/Introduction_to_HDFS.pdf" target="_blank">here</a></p>
+  <li><p>Furhter Verification could be achive by running the below script in your jupyter notebook</p>
+    <pre><code>
+    #Verifying spark, spark-root, histogrammer, and matplot works
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .master(
+        "spark://10.64.22.66:7077"
+    ) \
+    .appName(# Name of your application in the dashboard/UI
+             "benchmark check"
+            ) \
+    .config(# Tell Spark to load some extra libraries from Maven (the Java repository)
+            'spark.jars.packages',
+            'org.diana-hep:spark-root_2.11:0.1.13,org.diana-hep:histogrammar-sparksql_2.11:1.0.4',
+            ) \
+    .config('spark.cores.max',3
+            ) \
+    .getOrCreate()
+
+#verifying spark
+import random
+
+def inside(p):     
+  x, y = random.random(), random.random()
+  return x*x + y*y < 1
+
+# SparkContexts provide most of the "execution engine" of Spark
+sc = spark.sparkContext
+# One million
+num_samples = 1000000
+count = sc.parallelize(range(0, num_samples)).filter(inside).count()
+pi = 4.0 * count / num_samples
+print(pi)
+    </code></pre>
+    <pre><code>
+    #Verifying Spark-ROOT functionality
+# Read the ROOT file into a Spark DataFrame...
+import os
+testPath = "hdfs:///user/shoh/nanoaod/bbdm80X_NANO.root"
+df = spark.read.format("org.dianahep.sparkroot").load(testPath)
+# ... and print the number of events
+print df.count()
+    </code></p>
 </ul>
