@@ -85,6 +85,7 @@ count = sc.parallelize(range(0, num_samples)).filter(inside).count()
 pi = 4.0 * count / num_samples
 print(pi)
     </code></pre>
+    
     <pre><code>
 #Verifying Spark-ROOT functionality
 # Read the ROOT file into a Spark DataFrame...
@@ -95,12 +96,14 @@ df = spark.read.format("org.dianahep.sparkroot").load(testPath)
 print df.count()
     </code></p>
     
-    <pre><code>
+<pre><code>
 #Verifying histogrammar
 # Produce 200,000 random numbers
 import random
 data = [random.gauss(0, 1) for i in range(200000)]
+</code></pre>
 
+<pre><code>
 # Define the histogram
 import histogrammar as hg
 gauss = hg.Bin(num=16,
