@@ -45,14 +45,15 @@ package.json            build scripts
 
 **Text, publications, grants, courses.** Edit `index.html` directly and push. To add a publication, copy one `<li>` block in the "Selected publications" list, paste it at the top, and change the year, title, link and citation. No rebuild is needed as long as you reuse classes that are already on the page.
 
-**Portrait.** Replace `assets/img/portrait.jpg`. A photo on a plain white background, about 3:4 portrait, works best: the page shows it in greyscale and blends the white into the panel behind it.
+**Portrait.** Replace `assets/img/portrait.jpg`. A photo on a plain white background, about 3:4 portrait, works best: the white background blends into the panel, so the orbit rings show through it.
 
 **Styling.** If you add Tailwind classes that are not used anywhere else on the page, or change `src/input.css`, rebuild the stylesheet and commit the result:
 
 ```bash
-npm install      # first time only
 npm run build    # writes assets/css/site.css
 ```
+
+The build is pinned to Tailwind 3.4.17. Tailwind 4 changed its configuration format and cannot build this stylesheet, so do not upgrade it.
 
 `npm run watch` rebuilds on every save while you work.
 

@@ -3,8 +3,8 @@
   "private": true,
   "description": "Academic homepage of Hoh Siew Yan",
   "scripts": {
-    "build": "tailwindcss -i src/input.css -o assets/css/site.css --minify",
-    "watch": "tailwindcss -i src/input.css -o assets/css/site.css --watch"
+    "build": "npx --yes tailwindcss@3.4.17 -i src/input.css -o assets/css/site.css --minify",
+    "watch": "npx --yes tailwindcss@3.4.17 -i src/input.css -o assets/css/site.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17"
