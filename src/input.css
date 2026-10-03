@@ -1,0 +1,81 @@
+/* Source stylesheet. Compiled to assets/css/site.css with `npm run build`. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  ::selection { background: theme('colors.slate.900'); color: theme('colors.slate.50'); }
+
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible { outline: 2px solid theme('colors.amber.600'); outline-offset: 4px; }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  /* Text links: a hairline underline that turns amber on hover. */
+  .link {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.slate.300');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    transition: text-decoration-color .2s ease, color .2s ease;
+  }
+  .link:hover { text-decoration-color: theme('colors.amber.600'); }
+
+  /* Publication titles: plain at rest, amber hairline on hover. */
+  .title-link { text-decoration: none; }
+  .title-link:hover {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.amber.600');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+
+  /* Behind the portrait: a storage ring centred on the top-right corner,
+     with one muon slowly circulating through the visible quarter. */
+  .orbit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 76%;
+    aspect-ratio: 1;
+    border: 1px solid theme('colors.slate.300');
+    border-radius: 9999px;
+    transform: translate(50%, -50%) rotate(205deg);
+    animation: orbit 30s linear infinite;
+  }
+  .orbit::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    margin-left: -4.5px;
+    border-radius: 9999px;
+    background: theme('colors.amber.600');
+  }
+  .orbit--inner { width: 44%; animation: none; }
+  .orbit--inner::after { display: none; }
+
+  /* The "Earlier work" toggle: the plus turns into a cross when open. */
+  details[open] .summary-icon { transform: rotate(45deg); }
+}
+
+@keyframes orbit {
+  from { transform: translate(50%, -50%) rotate(205deg); }
+  to { transform: translate(50%, -50%) rotate(565deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .orbit { animation: none; transform: translate(50%, -50%) rotate(225deg); }
+  * { transition-duration: 0s !important; }
+}

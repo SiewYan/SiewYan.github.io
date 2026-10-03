@@ -1,0 +1,12 @@
+{
+  "name": "siewyan.github.io",
+  "private": true,
+  "description": "Academic homepage of Hoh Siew Yan",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o assets/css/site.css --minify",
+    "watch": "tailwindcss -i src/input.css -o assets/css/site.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
