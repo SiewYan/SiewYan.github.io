@@ -1,6 +1,6 @@
 # How to edit your academic website
 
-Most changes need just a text editor, Save, and a browser refresh. This is a plain HTML website; no website builder or package installation is required.
+ Most changes need just a text editor, Save, and a browser refresh. This is a plain HTML website; no website builder or package installation is required.
 
 ## Quick start
 
