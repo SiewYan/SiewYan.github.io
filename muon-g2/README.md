@@ -59,6 +59,7 @@ Node.js 20 or newer is sufficient; no installation is needed:
 
 ```
 node tests/run.mjs
+node tests/framing.mjs
 ```
 
 The test script prints checks and writes `data/validation.json`, the example records and benchmark fit. See `VALIDATION.md` for outcomes and limits. The complete-source ZIP includes the tests; the deployment ZIP does not need them at runtime.
@@ -76,6 +77,7 @@ The test script prints checks and writes `data/validation.json`, the example rec
 | `app/field.js` | Independent field samples, calibration and extraction |
 | `app/storage.js` | Deduplication, bounded recipe persistence and downloads |
 | `app/worker.js` | Generation and fitting off the main UI thread |
+| `app/framing.js` | Aspect-aware camera fitting and projected-ring centering |
 | `app/scene.js` | Three.js display, camera, rendering and schematic fallback |
 | `app/plots.js` | Accessible SVG plots and data-table values |
 | `app/main.js` | Workspace navigation, controls and presentation |

@@ -25,12 +25,12 @@
     {
       "name": "Proper exponential lifetime and gamma dilation",
       "pass": true,
-      "ms": 6
+      "ms": 5
     },
     {
       "name": "Michel normalization, energy marginal, mu+ angular sign and azimuth",
       "pass": true,
-      "ms": 28
+      "ms": 25
     },
     {
       "name": "Massless boost and combined invisible-recoil four-momentum closure",
@@ -40,7 +40,7 @@
     {
       "name": "Threshold asymmetry from independent ultrarelativistic analytic oracle",
       "pass": true,
-      "ms": 38
+      "ms": 37
     },
     {
       "name": "Finite geometric hits, honest undetected particles and straw provenance",
@@ -50,7 +50,7 @@
     {
       "name": "Configuration separation, replay deduplication, chunk invariance and cut consistency",
       "pass": true,
-      "ms": 1
+      "ms": 2
     },
     {
       "name": "Exact bin integration independently checked by Simpson quadrature",
@@ -60,32 +60,32 @@
     {
       "name": "Independent ideal fit recovery, empty bins and window changes",
       "pass": true,
-      "ms": 300
+      "ms": 299
     },
     {
       "name": "Detector-generation ideal benchmark closes on observed arrival time",
       "pass": true,
-      "ms": 418
+      "ms": 428
     },
     {
       "name": "Fully inclusive and unpolarized ideal samples give no identified frequency",
       "pass": true,
-      "ms": 574
+      "ms": 583
     },
     {
       "name": "Sparse samples and two-frequency ambiguity are rejected or visibly mismatched",
       "pass": true,
-      "ms": 124
+      "ms": 123
     },
     {
       "name": "Known early-efficiency loss corrects integrated likelihood on same observations",
       "pass": true,
-      "ms": 747
+      "ms": 750
     },
     {
       "name": "Repeated independent fits: uncertainty behavior and square-root scaling",
       "pass": true,
-      "ms": 3301
+      "ms": 3275
     },
     {
       "name": "Field calibration, angular-frequency units, extraction and common-error floor",

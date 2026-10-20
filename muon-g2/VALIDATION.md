@@ -81,3 +81,20 @@ The application was exercised in the Codex in-app browser with desktop and narro
 This is not an exhaustive browser/device, screen-reader, GPU or performance certification. The fallback was exercised through its explicit mode, not a physical GPU failure. Keyboard focus styles, semantic controls and tables are supplied, but a full assistive-technology audit was not performed. The export mechanism was browser-tested for analysis JSON; CSV, full-event JSON and SVG share the download path and were checked in source, not each downloaded in every browser.
 
 The exact five-parameter model is validated for the stated ideal benchmark. Geometric acceptance, momentum spread, fast smearing and gain drift may cause unquantified model bias. The reported covariance does not include that bias. The fixed-parameter Poisson diagnostic is not a calibrated fit p-value. No full detector shower, independent tracker reconstruction, electric-field transport, vertical pitch, real beam distribution, nonuniform field weighting, pile-up or precision correction model has been validated or claimed.
+
+
+## Follow-up display audit: centered ring and controls
+
+The follow-up audit found a genuine high-DPI canvas sizing bug. At a measured device pixel ratio of 1.2, the 409 × 360 CSS-pixel scene had been displaying its roughly 490 × 432 drawing buffer at intrinsic size. This offset the apparent ring center and allowed rendering to overflow beneath nearby controls. The canvas now explicitly fills its container in CSS while retaining a higher-resolution drawing buffer. The container clips its own rendering.
+
+Overview and top-down views additionally fit the apparatus to the current aspect ratio, then center the ring's projected silhouette. Perspective projection can otherwise offset an ellipse from the projection of its world-space origin. Camera changes do not move geometry or physical hit coordinates. Reset view restores the selected camera's fitted view.
+
+Additional fixes from this audit:
+
+- Skip rendering when the scene is hidden/zero-sized, avoiding invalid camera aspect ratios.
+- End drag state on pointer cancellation and lost pointer capture.
+- Pause playback when leaving the ring workspace or hiding the page; prevent elapsed hidden time from jumping the simulation.
+- Allow playback controls to stop the prescribed injection illustration.
+- Reject nonfinite selection values before creating histograms.
+
+Verification: all original **19 numerical checks passed again**. `node tests/framing.mjs` passed **48 independent camera cases** across six aspect ratios, four rotations and overview/top-down views; the projected ring remained centered and the apparatus stayed within a padded frame. Browser checks found a **zero-pixel canvas/container center difference** at desktop and phone widths, no horizontal page overflow, functional switching through all six camera views, functional injection pause and workspace switching, and no console warnings/errors. The seeded fit remained 1.439651 ± 0.000487 rad/μs.
