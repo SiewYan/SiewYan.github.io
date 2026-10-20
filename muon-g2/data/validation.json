@@ -1,0 +1,137 @@
+{
+  "version": "ring-to-result-1.0.0",
+  "date": "2026-10-20",
+  "tests": [
+    {
+      "name": "Consistent p/B/r, magic gamma and characteristic scales",
+      "pass": true,
+      "ms": 0
+    },
+    {
+      "name": "Independent RK4 Lorentz oracle and charge-dependent curvature",
+      "pass": true,
+      "ms": 2
+    },
+    {
+      "name": "Magnetic transport preserves energy; helix agrees with numerical integration",
+      "pass": true,
+      "ms": 1
+    },
+    {
+      "name": "Lab spin includes orbital rotation, relative anomaly and g=2 limit",
+      "pass": true,
+      "ms": 0
+    },
+    {
+      "name": "Proper exponential lifetime and gamma dilation",
+      "pass": true,
+      "ms": 6
+    },
+    {
+      "name": "Michel normalization, energy marginal, mu+ angular sign and azimuth",
+      "pass": true,
+      "ms": 28
+    },
+    {
+      "name": "Massless boost and combined invisible-recoil four-momentum closure",
+      "pass": true,
+      "ms": 1
+    },
+    {
+      "name": "Threshold asymmetry from independent ultrarelativistic analytic oracle",
+      "pass": true,
+      "ms": 38
+    },
+    {
+      "name": "Finite geometric hits, honest undetected particles and straw provenance",
+      "pass": true,
+      "ms": 94
+    },
+    {
+      "name": "Configuration separation, replay deduplication, chunk invariance and cut consistency",
+      "pass": true,
+      "ms": 1
+    },
+    {
+      "name": "Exact bin integration independently checked by Simpson quadrature",
+      "pass": true,
+      "ms": 3
+    },
+    {
+      "name": "Independent ideal fit recovery, empty bins and window changes",
+      "pass": true,
+      "ms": 300
+    },
+    {
+      "name": "Detector-generation ideal benchmark closes on observed arrival time",
+      "pass": true,
+      "ms": 418
+    },
+    {
+      "name": "Fully inclusive and unpolarized ideal samples give no identified frequency",
+      "pass": true,
+      "ms": 574
+    },
+    {
+      "name": "Sparse samples and two-frequency ambiguity are rejected or visibly mismatched",
+      "pass": true,
+      "ms": 124
+    },
+    {
+      "name": "Known early-efficiency loss corrects integrated likelihood on same observations",
+      "pass": true,
+      "ms": 747
+    },
+    {
+      "name": "Repeated independent fits: uncertainty behavior and square-root scaling",
+      "pass": true,
+      "ms": 3301
+    },
+    {
+      "name": "Field calibration, angular-frequency units, extraction and common-error floor",
+      "pass": true,
+      "ms": 1
+    },
+    {
+      "name": "Fitter has no import of generator or hidden physics truth",
+      "pass": true,
+      "ms": 0
+    }
+  ],
+  "summary": "19/19 checks passed",
+  "demo": {
+    "run": "Rf955b105",
+    "generated": 100000,
+    "selected": 11895,
+    "omega": 1.4396508195555815,
+    "sigmaOmega": 0.0004873888114972759,
+    "truthOmega": 1.4391765944445638,
+    "tau": 64.06363229960613,
+    "A": 0.4021971332951358,
+    "correlationOmegaPhase": -0.8229524226364675
+  },
+  "geometric": {
+    "generated": 20000,
+    "detected": 7763,
+    "trackerTagged": 372
+  },
+  "ensemble": {
+    "count": 12,
+    "meanPull": 0.19333705117405364,
+    "pullSD": 1.0430452098241956,
+    "uncertaintyRatio20kTo80k": 2.014254253248068,
+    "note": "Small ensemble sanity check; not precision coverage validation."
+  },
+  "correctionComparison": {
+    "baseline": {
+      "omega": 1.4384098658284743,
+      "tau": 72.63940019628838,
+      "deviance": 1130.301857335268
+    },
+    "corrected": {
+      "omega": 1.4384946618808432,
+      "tau": 64.07809557919987,
+      "deviance": 1012.9841356834038
+    }
+  }
+}

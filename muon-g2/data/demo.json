@@ -1,0 +1,29 @@
+{
+  "label": "Seeded example: 100,000 generated positive muons",
+  "version": "ring-to-result-1.0.0",
+  "generatedMuons": 100000,
+  "config": {
+    "seed": 240989,
+    "p": 3.094,
+    "spread": 0,
+    "polarization": 0.97,
+    "B": 1.4511351385588898,
+    "anomaly": 0.00116592,
+    "mode": "ideal",
+    "efficiencyLoss": 0,
+    "gainDrift": 0
+  },
+  "selection": {
+    "threshold": 1.8,
+    "start": 30,
+    "end": 650
+  },
+  "recipe": "Generate indices 0..99999 with app/generator.js. Sampled realized records: demo-events.json. Complete benchmark fit: demo-fit.json.",
+  "units": {
+    "momentum": "GeV/c",
+    "B": "tesla",
+    "time": "microsecond",
+    "energy": "GeV",
+    "position": "m"
+  }
+}
